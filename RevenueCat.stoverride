@@ -1,4 +1,4 @@
-#!desc=京东比价 (内置版)
+#!desc=RevenueCat
 name: RevenueCat
 desc: 解锁是暂时的,购买也不是永久的,订阅、跑路
 http:
@@ -11,7 +11,7 @@ http:
       type: response
       require-body: true
       timeout: 60
-	  
+
     - match: ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url
       name: RevenueCat
       type: request
