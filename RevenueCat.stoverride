@@ -12,7 +12,7 @@ http:
       require-body: true
       timeout: 60
 	  
-	- match: ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url
+    - match: ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url
       name: RevenueCat
       type: request
       require-body: 
