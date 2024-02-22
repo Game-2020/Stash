@@ -1,18 +1,24 @@
-#!desc=京东比价 (内置版)
-name: jdprice
-desc: 京东比价
+name: "京东比价"
+desc: "历史价格+跳转京粉 横幅版"
+openUrl: "http://boxjs.com/项目地址/"
+author: "Tartarus2014"
+homepage: "https://github.com/Tartarus2014/"
+manual: "https://github.com/项目地址/"
+icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png"
+category: "Stash"
+
 http:
   mitm:
     - "api.m.jd.com"
 
   script:
     - match: ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig)
-      name: jdprice
+      name: JD_Price
       type: response
       require-body: true
       timeout: 10
 
 script-providers:
-  jdprice:
+  JD_Price:
     url: https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
     interval: 86400
