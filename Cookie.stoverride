@@ -1,0 +1,79 @@
+#SUBSCRIBED https://github.com/Game-2020/Stash.stoverride
+name: "签到Check获取"
+desc: "贴吧 威锋 阿里云盘 喜马拉雅"
+#openUrl: "http://boxjs.com/
+#author: "作者名"
+#homepage: "https://主页/"
+#manual: "https://github.com/"
+icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png"
+category: "Cookie"
+
+http:
+  mitm:
+    - "tieba.baidu.com"
+    - "*.ximalaya.com"
+    - "interface.music.163.com"
+    - "auth.alipan.com,auth.aliyundrive.com"
+
+  script:
+    - match: https?:\/\/tieba\.baidu\.com\/?.？
+      name: TiaBa
+      type: request
+      require-body: true
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+    - match: https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/
+      name: XiMaLaYa
+      type: request
+      require-body: false
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+    - match: https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token
+      name: AliYunPan
+      type: request
+      require-body: true
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+    - match: https:\/\/interface\.music\.163\.com\/weapi\/nmusician\/
+      name: NeteaseCloudMusic-Cookie
+      type: request
+      require-body: false
+      timeout: 10
+      argument: ''
+      debug: false
+      binary-mode: false
+      max-size: 1048576
+
+
+script-providers:
+  TiaBa:
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
+    interval: 86400
+
+  XiMaLaYa:
+    url: https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js
+    interval: 86400
+
+  AliYunPan:
+    url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+    interval: 86400
+
+  WeiFeng:
+    url: https://raw.githubusercontent.com/githubdulong/Script/master/weifeng.js
+    interval: 86400
+
+  NeteaseCloudMusic-Cookie:
+    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
+    interval: 86400
