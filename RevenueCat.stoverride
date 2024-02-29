@@ -1,22 +1,22 @@
-#!desc=RevenueCat
 name: RevenueCat
 desc: 解锁是暂时的,购买也不是永久的,订阅、跑路
+
 http:
   mitm:
     - "api.revenuecat.com"
 
   script:
-    - match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url
+    - ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
       name: RevenueCat
       type: response
       require-body: true
       timeout: 60
 
-    - match: ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url
-      name: RevenueCat
+    - match: ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$
+      name: replaceHeader
       type: request
       require-body: 
-      timeout: 60
+      timeout: 30
 
 script-providers:
   RevenueCat:
