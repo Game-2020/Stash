@@ -1,0 +1,24 @@
+name: "海豚记账本"
+desc: "Unlock VIP"
+openUrl: "http://boxjs.com/项目地址/"
+author: "X"
+homepage: "https://github.com/X/"
+manual: "https://github.com/项目地址/"
+icon: "https://raw.githubusercontent.com/Game-2020/icon/main/haitunjizhangben.png"
+category: "G"
+
+http:
+  mitm:
+    - "book.haitunwallet.com"
+
+  script:
+    - match: https:\/\/book\.haitunwallet\.com\/app\/vip\/status
+      name: haitunjizhangben
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  haitunjizhangben:
+    url: https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/js/htjzb.js
+    interval: 86400
