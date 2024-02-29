@@ -1,0 +1,24 @@
+name: ProKnockout
+desc: Unlock VIP
+openUrl: http://boxjs.com/项目地址/
+author: lutqhysky
+homepage: https://github.com/lutqhysky
+manual: https://github.com/项目地址/
+icon: https://raw.githubusercontent.com/deezertidal/private/main/icons/proknockout.png
+category: G
+
+http:
+  mitm:
+    - "buy.itunes.apple.com"
+
+  script:
+    - match: https://buy.itunes.apple.com/verifyReceipt
+      name: proKnockout
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  proKnockout:
+    url: https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/js/proKnockout.js
+    interval: 86400
