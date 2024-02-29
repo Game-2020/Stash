@@ -1,11 +1,11 @@
-name: "海豚记账本"
-desc: "Unlock VIP"
-openUrl: "http://boxjs.com/项目地址/"
-author: "X"
-homepage: "https://github.com/X/"
-manual: "https://github.com/项目地址/"
-icon: "https://raw.githubusercontent.com/Game-2020/icon/main/haitunjizhangben.png"
-category: "G"
+name: 海豚记账本
+desc: Unlock VIP
+openUrl: http://boxjs.com/项目地址/
+author: X
+homepage: https://github.com/X/
+manual: https://github.com/项目地址/
+icon: https://raw.githubusercontent.com/Game-2020/icon/main/haitunjizhangben.png
+category: G
 
 http:
   mitm:
