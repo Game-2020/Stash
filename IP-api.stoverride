@@ -1,10 +1,12 @@
 name: IP信息
 desc: IP信息面板
 icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+
 tiles:
   - name: IPxinxi
     icon: 'mappin.and.ellipse'
     backgroundColor: '#f50505'
+
 script-providers:
   IPxinxi:
     url: https://raw.githubusercontent.com/deezertidal/Surge_Module/master/files/ip-api.js
