@@ -1,11 +1,11 @@
-name: "京东比价"
-desc: "历史价格+跳转京粉 内置版"
-openUrl: "http://boxjs.com/项目地址/"
-author: "Tartarus2014"
-homepage: "https://github.com/Tartarus2014/"
-manual: "https://github.com/项目地址/"
-icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png"
-category: "G"
+name: 京东比价
+desc: 历史价格+跳转京粉 内置版
+openUrl: http://boxjs.com/项目地址/
+author: Tartarus2014
+homepage: https://github.com/Tartarus2014/
+manual: https://github.com/项目地址/
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png
+category: G
 
 http:
   mitm:
