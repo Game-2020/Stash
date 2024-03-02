@@ -1,5 +1,5 @@
 name: 京东比价
-desc: 历史价格+跳转京粉 内置版
+desc: 历史价格+跳转京粉 横幅版
 openUrl: http://boxjs.com/项目地址/
 author: Tartarus2014
 homepage: https://github.com/Tartarus2014/
@@ -13,11 +13,11 @@ http:
 
   script:
     - match: ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item)
-      name: "京东比价"
+      name: 京东比价
       type: response
       require-body: true
 
 script-providers:
-  "京东比价":
-    url: https://raw.githubusercontent.com/Tartarus2014/Script/master/jdjf_price.js
+  京东比价:
+    url: https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js
     interval: 86400
