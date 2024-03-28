@@ -16,10 +16,7 @@ http:
     - "interface.music.163.com"
 
 
-    - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
-      name: 微付金币
-      type: response
-      require-body: true
+
 
     - match: https?:\/\/tieba\.baidu\.com\/?.？
       name: TiaBa
@@ -62,9 +59,7 @@ http:
       max-size: 1048576
 
 script-providers:
-  微付金币:
-    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
-    interval: 86400
+
 
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
