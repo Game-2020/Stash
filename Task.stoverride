@@ -10,7 +10,7 @@ category: 签到
 cron:
   script:
     - name: 微付金币
-      cron: '30 9 * * *'
+      cron: '50 23 * * *'
       timeout: 10
 
     - name: TiaBa
