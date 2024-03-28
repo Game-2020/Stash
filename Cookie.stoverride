@@ -1,6 +1,11 @@
 name: Cookie
 desc: 贴吧 阿里云盘 喜马拉雅
-
+openUrl: http://boxjs.com/项目地址/
+author: 作者
+homepage: https://github.com/主页/
+manual: https://github.com/项目地址/
+icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+category: 签到
 
 http:
   mitm:
@@ -11,7 +16,10 @@ http:
     - "interface.music.163.com"
 
 
-
+    - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
+      name: 微付金币
+      type: response
+      require-body: true
 
     - match: https?:\/\/tieba\.baidu\.com\/?.？
       name: TiaBa
@@ -54,7 +62,9 @@ http:
       max-size: 1048576
 
 script-providers:
-
+  微付金币:
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
+    interval: 86400
 
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
