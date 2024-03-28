@@ -9,6 +9,10 @@ category: 签到
 
 cron:
   script:
+    - name: 微付金币
+      cron: '30 9 * * *'
+      timeout: 10
+
     - name: TiaBa
       cron: '11 12 * * *'
       timeout: 60
@@ -30,6 +34,10 @@ cron:
       timeout: 60
 
 script-providers:
+  微付金币:
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
+    interval: 86400
+
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
     interval: 86400
