@@ -1,5 +1,5 @@
 name: Cookie
-desc: 贴吧 威锋 阿里云盘 喜马拉雅
+desc: 贴吧 阿里云盘 喜马拉雅
 openUrl: http://boxjs.com/项目地址/
 author: 作者
 homepage: https://github.com/主页/
@@ -17,7 +17,7 @@ http:
 
 
     - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
-      name: 1
+      name: 微付金币
       type: response
       require-body: true
 
@@ -62,7 +62,7 @@ http:
       max-size: 1048576
 
 script-providers:
-  1:
+  微付金币:
     url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
     interval: 86400
 
