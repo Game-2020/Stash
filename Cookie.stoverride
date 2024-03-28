@@ -17,7 +17,7 @@ http:
 
 
     - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
-      name: 微付金币
+      name: 1
       type: response
       require-body: true
 
@@ -62,7 +62,7 @@ http:
       max-size: 1048576
 
 script-providers:
-  微付金币:
+  1:
     url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
     interval: 86400
 
