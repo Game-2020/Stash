@@ -1,5 +1,5 @@
 name: Cookie
-desc: 微付金币 贴吧 阿里云盘 喜马拉雅
+desc: 贴吧 阿里云盘 喜马拉雅 微付金币
 openUrl: http://boxjs.com/项目地址/
 author: 作者
 homepage: https://github.com/主页/
@@ -10,18 +10,12 @@ category: 签到
 
 http:
   mitm:
-    - "payapp.weixin.qq.com"
     - "tieba.baidu.com"
     - "auth.alipan.com,auth.aliyundrive.com"
     - "*.ximalaya.com"
-    - "interface.music.163.com"
+    - "payapp.weixin.qq.com"
 
   script:
-    - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
-      name: 微付金币
-      type: response
-      require-body: true
-
     - match: https?:\/\/tieba\.baidu\.com\/?.？
       name: TiaBa
       type: request
@@ -52,21 +46,12 @@ http:
       binary-mode: false
       max-size: 1048576
 
-    - match: https:\/\/interface\.music\.163\.com\/weapi\/nmusician\/
-      name: NeteaseCloudMusic-Cookie
-      type: request
-      require-body: false
-      timeout: 10
-      argument: ''
-      debug: false
-      binary-mode: false
-      max-size: 1048576
+    - match: https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login
+      name: 微付金币
+      type: response
+      require-body: true
 
 script-providers:
-  微付金币:
-    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
-    interval: 86400
-
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
     interval: 86400
@@ -79,6 +64,6 @@ script-providers:
     url: https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js
     interval: 86400
 
-  NeteaseCloudMusic-Cookie:
-    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
+  微付金币:
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
     interval: 86400
