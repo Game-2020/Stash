@@ -9,10 +9,6 @@ category: 签到
 
 cron:
   script:
-    - name: 微付金币
-      cron: '50 23 * * *'
-      timeout: 10
-
     - name: TiaBa
       cron: '11 12 * * *'
       timeout: 60
@@ -29,15 +25,11 @@ cron:
       cron: '13 12 * * *'
       timeout: 60
 
-    - name: NeteaseCloudMusic
-      cron: '15 12 * * *'
+    - name: 微付金币
+      cron: '50 23 * * *'
       timeout: 60
 
 script-providers:
-  微付金币:
-    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
-    interval: 86400
-
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
     interval: 86400
@@ -54,6 +46,6 @@ script-providers:
     url: https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js
     interval: 86400
 
-  NeteaseCloudMusic:
-    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js
+  微付金币:
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
     interval: 86400
