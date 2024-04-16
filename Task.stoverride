@@ -17,10 +17,6 @@ cron:
       cron: '12 12 * * *'
       timeout: 60
 
-    - name: 阿里云社区日常任务
-      cron: '0 7,13 * * *'
-      timeout: 60
-
     - name: AliYunPan
       cron: '12 12 * * *'
       timeout: 60
@@ -40,10 +36,6 @@ script-providers:
 
   WeiFeng:
     url: https://raw.githubusercontent.com/githubdulong/Script/master/weifeng.js
-    interval: 86400
-
-  阿里云社区日常任务:
-    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/aliyun_web/aliyun_web.js
     interval: 86400
 
   AliYunPan:
