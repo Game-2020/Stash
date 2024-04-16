@@ -11,7 +11,6 @@ category: 签到
 http:
   mitm:
     - "tieba.baidu.com"
-    - "developer.aliyun.com"
     - "auth.alipan.com,auth.aliyundrive.com"
     - "*.ximalaya.com"
     - "payapp.weixin.qq.com"
@@ -26,12 +25,6 @@ http:
       debug: false
       binary-mode: false
       max-size: 1048576
-
-    - match: ^https?:\/\/developer\.aliyun\.com\/developer\/api\/my\/user\/getUser
-      name: 阿里云社区日常任务
-      type: response
-      require-body: true
-      timeout: 60
 
     - match: https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token
       name: AliYunPan
@@ -61,10 +54,6 @@ http:
 script-providers:
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
-    interval: 86400
-
-  阿里云社区日常任务:
-    url: https://raw.githubusercontent.com/leiyiyan/resource/main/script/aliyun_web/aliyun_web.js
     interval: 86400
 
   AliYunPan:
