@@ -1,5 +1,5 @@
 name: Task
-desc: 贴吧 威锋 阿里云盘 喜马拉雅 微付金币 夸克网盘
+desc: 贴吧 威锋 阿里云盘 喜马拉雅 夸克网盘 微付金币
 openUrl: http://boxjs.com/项目地址/
 author: 作者
 homepage: https://github.com/主页/
@@ -9,53 +9,52 @@ category: 签到
 
 cron:
   script:
-    - name: TiaBa
+    - name: 贴吧
       cron: '11 12 * * *'
       timeout: 60
 
-    - name: WeiFeng
+    - name: 威锋
       cron: '12 12 * * *'
       timeout: 60
 
-    - name: AliYunPan
+    - name: 阿里云盘
       cron: '12 12 * * *'
       timeout: 60
 
-    - name: XiMaLaYa
+    - name: 喜马拉雅
       cron: '13 12 * * *'
-      timeout: 60
-
-    - name: 微付金币
-      cron: '50 23 * * *'
       timeout: 60
 
     - name: 夸克网盘
       cron: '13 12 * * *'
       timeout: 60
 
+    - name: 微付金币
+      cron: '50 23,20,12 * * *'
+      timeout: 60
 
 
 script-providers:
-  TiaBa:
+  贴吧:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
     interval: 86400
 
-  WeiFeng:
+  威锋:
     url: https://raw.githubusercontent.com/githubdulong/Script/master/weifeng.js
     interval: 86400
 
-  AliYunPan:
+  阿里云盘:
     url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
     interval: 86400
 
-  XiMaLaYa:
+  喜马拉雅:
     url: https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js
-    interval: 86400
-
-  微付金币:
-    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
     interval: 86400
 
   夸克网盘:
     url: https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js
+    interval: 86400
+
+  微付金币:
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
     interval: 86400
