@@ -1,5 +1,5 @@
 name: Cookie
-desc: 贴吧 阿里云盘 喜马拉雅 微付金币
+desc: 贴吧 阿里云盘 喜马拉雅 微付金币 夸克网盘
 openUrl: http://boxjs.com/项目地址/
 author: 作者
 homepage: https://github.com/主页/
@@ -14,6 +14,9 @@ http:
     - "auth.alipan.com,auth.aliyundrive.com"
     - "*.ximalaya.com"
     - "payapp.weixin.qq.com"
+    - "coral2.quark.cn"
+    - "drive-pc.quark.cn"
+
 
   script:
     - match: https?:\/\/tieba\.baidu\.com\/?.？
@@ -51,6 +54,30 @@ http:
       type: response
       require-body: true
 
+    - match: ^https:\/\/drive-pc\.quark\.cn\/1\/clouddrive\/file\/sort
+      name: "夸克网盘"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/coral2\.quark\.cn\/task\/trigger
+      name: "夸克网盘"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/coral2\.quark\.cn\/quark\/(carbon|welfare)\/(v1|v2)\/signIn
+      name: "夸克网盘"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/coral2\.quark\.cn\/quark\/welfare\/v2\/sleep\/trigger
+      name: "夸克网盘"
+      type: request
+      require-body: true
+      timeout: 60
+
 script-providers:
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
@@ -66,4 +93,8 @@ script-providers:
 
   微付金币:
     url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
+    interval: 86400
+
+  夸克网盘:
+    url: https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js
     interval: 86400
