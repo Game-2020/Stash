@@ -11,7 +11,8 @@ category: 签到
 http:
   mitm:
     - "tieba.baidu.com"
-    - "auth.alipan.com,auth.aliyundrive.com"
+    - "auth.alipan.com"
+    - "auth.aliyundrive.com"
     - "*.ximalaya.com"
     - "coral2.quark.cn"
     - "drive-pc.quark.cn"
@@ -23,7 +24,7 @@ http:
       name: 贴吧
       type: request
       require-body: true
-      timeout: 10
+      timeout: 60
       argument: ''
       debug: false
       binary-mode: false
@@ -33,7 +34,7 @@ http:
       name: 阿里云盘
       type: request
       require-body: true
-      timeout: 10
+      timeout: 60
       argument: ''
       debug: false
       binary-mode: false
@@ -43,7 +44,7 @@ http:
       name: 喜马拉雅
       type: request
       require-body: false
-      timeout: 10
+      timeout: 60
       argument: ''
       debug: false
       binary-mode: false
