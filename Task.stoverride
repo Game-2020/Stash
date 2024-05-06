@@ -29,6 +29,12 @@ cron:
       cron: '50 23 * * *'
       timeout: 60
 
+    - name: 夸克网盘
+      cron: '13 12 * * *'
+      timeout: 60
+
+
+
 script-providers:
   TiaBa:
     url: https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
@@ -48,4 +54,8 @@ script-providers:
 
   微付金币:
     url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
+    interval: 86400
+
+  夸克网盘:
+    url: https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js
     interval: 86400
