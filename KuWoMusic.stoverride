@@ -27,5 +27,5 @@ http:
 
 script-providers:
   "酷我音乐":
-    url: https://napi.ltd/script/Worker/KuWo.js
+    url: https://raw.githubusercontent.com/Game-2020/Scripts/main/KuWoMusic.js
     interval: 86400
