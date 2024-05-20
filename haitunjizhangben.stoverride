@@ -13,12 +13,12 @@ http:
 
   script:
     - match: https:\/\/book\.haitunwallet\.com\/app\/vip\/status
-      name: haitunjizhangben
+      name: 海豚记账本
       type: response
       require-body: true
       timeout: 10
 
 script-providers:
-  haitunjizhangben:
+  海豚记账本:
     url: https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/js/htjzb.js
     interval: 86400
