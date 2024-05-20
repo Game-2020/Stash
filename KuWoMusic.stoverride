@@ -1,31 +1,30 @@
-name: |-
-  酷我音乐 & 酷我畅听
-desc: |-
-  〔 酷我音乐&酷我畅听 〕全功能破解
-author: |-
+name:
+  酷我音乐&酷我畅听
+desc:
+  〔酷我音乐&酷我畅听〕全功能破解
+author:
   影子
-icon: |-
+icon:
   https://file.napi.ltd/Static/Image/KuWo.png
-openUrl: |-
+openUrl:
   https://napi.ltd
-homepage: |-
+homepage:
   https://napi.ltd
-date: |-
+date:
   2024-05-16
 
 http:
-
   mitm:
     - "*.kuwo.cn"
 
   script:
     - match: ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/audi.tion|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic))|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice))
-      name: "酷我音乐"
+      name: 酷我音乐
       type: response
       require-body: true
       timeout: 60
 
 script-providers:
-  "酷我音乐":
+  酷我音乐:
     url: https://raw.githubusercontent.com/Game-2020/Scripts/main/KuWoMusic.js
     interval: 86400
