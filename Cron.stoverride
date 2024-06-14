@@ -29,6 +29,10 @@ cron:
       cron: '13 12 * * *'
       timeout: 60
 
+    - name: 腾讯视频
+      cron: "13 12 * * *"
+      timeout: 120
+
     - name: 微付金币
       cron: '50 23,20,12 * * *'
       timeout: 60
@@ -53,6 +57,10 @@ script-providers:
 
   夸克网盘:
     url: https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js
+    interval: 86400
+
+  腾讯视频:
+    url: https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
     interval: 86400
 
   微付金币:
