@@ -30,7 +30,7 @@ cron:
       timeout: 60
 
     - name: 腾讯视频
-      cron: "13 12,20 * * *"
+      cron: '13 12,20 * * *'
       timeout: 120
 
     - name: 微付金币
