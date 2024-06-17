@@ -10,27 +10,27 @@ category: TASK
 cron:
   script:
     - name: 贴吧
-      cron: '11 12 * * *'
+      cron: '11 12,20 * * *'
       timeout: 60
 
     - name: 威锋
-      cron: '12 12 * * *'
+      cron: '12 12,20 * * *'
       timeout: 60
 
     - name: 阿里云盘
-      cron: '12 12 * * *'
+      cron: '12 12,20 * * *'
       timeout: 60
 
     - name: 喜马拉雅
-      cron: '13 12 * * *'
+      cron: '13 12,20 * * *'
       timeout: 60
 
     - name: 夸克网盘
-      cron: '13 12 * * *'
+      cron: '13 12,20 * * *'
       timeout: 60
 
     - name: 腾讯视频
-      cron: "13 12 * * *"
+      cron: "13 12,20 * * *"
       timeout: 120
 
     - name: 微付金币
