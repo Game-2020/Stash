@@ -1,5 +1,5 @@
 name: Cron
-desc: 贴吧 威锋 阿里云盘 喜马拉雅 夸克网盘 腾讯视频 酷狗概念版
+desc: 贴吧 威锋 阿里云盘 喜马拉雅 夸克网盘 腾讯视频
 openUrl: http://boxjs.com/项目地址/
 author: 作者
 homepage: https://github.com/主页/
@@ -33,9 +33,6 @@ cron:
       cron: '13 12,20 * * *'
       timeout: 120
 
-    - name: 酷狗概念版
-      cron: '0 9 * * *'
-      timeout: 60
 
 
 
@@ -62,8 +59,4 @@ script-providers:
 
   腾讯视频:
     url: https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/tenvideo.js
-    interval: 86400
-
-  酷狗概念版:
-    url: https://gist.githubusercontent.com/Alex0510/1c389019c264a7d3ddbe4dbcf77d4295/raw/kugou_auto.js
     interval: 86400
